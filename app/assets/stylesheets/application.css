@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+html{
+    width: 100%;
+    font-family: "Droid Arabic Kufi", serif;
+    background-color: floralwhite;
+}
+body{
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.51);
+}
+.center{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+#header{
+    background-color: whitesmoke;
+}
+#header *{
+    display: inline;
+}
+#header ul{
+    float: right;
+}
+#header h1 a{
+    color: cadetblue;
+}
+#header h1 a:hover{
+    color: darkcyan;
+}
+#header li{
+    float: right;
+    color: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+    background-color: cadetblue;
+    border-radius: 10px;
+}
+
+#header li :hover {
+    color: white;
+}
+#header li a{
+    color: whitesmoke;
+}
+#footer {
+    margin-top: 180px;
+    padding: 5px;
+    background-color: whitesmoke;
+}
+#footer a {
+    color: cadetblue;
+}
+#footer ul {
+    display: inline;
+    float: right;
+    margin: 5px;
+}
+#footer li {
+    display: inline;
+    margin: 5px;
+}
+#footer li :hover{
+    color: darkcyan;
+}
+#footer li a{
+    color: cadetblue;
+}
+.alert-success{
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(144, 238, 144, 0.4);
+    width: 90%;
+}

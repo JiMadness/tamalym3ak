@@ -1,0 +1,6 @@
+<%= provide :title ,@user.name %>
+<div id="profile-info">
+  <%= image_tag @user.avatar.url(:medium)%>
+  <h1 class="user-info"><%= @user.name %></h1>
+  <h3 class="user-info"><%= @user.email %></h3>
+</div>

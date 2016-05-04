@@ -1,0 +1,42 @@
+<%= provide :app_name,'تملي معاك' %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= make_title(yield(:title), yield(:app_name)) %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="header">
+  <header>
+    <h1>&nbsp;&nbsp;<a href="/"> <%= yield(:app_name) %> </a></h1>
+    <ul>
+      <li><%= link_to 'دخول مفاجئ', login_path %></li>
+      <li><%= link_to 'إحنا مين بئا', about_path %></li>
+    </ul>
+  </header>
+  <br>
+  <br>
+  </div>
+<br>
+<div id="context">
+  <% flash.each do |message_type, message| %>
+      <div class="alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <%= yield %>
+</div>
+
+<div id="footer">
+  <footer>
+    &nbsp;&nbsp;
+    معمول بحنية by <a href="http://github.com/JiMadness" target="_blank">JiMadness</a>
+    <ul>
+      <li><%= link_to 'إحنا مين',about_path %></li>
+      <li><%= link_to 'ممكن نتعرف؟',contact_path %></li>
+    </ul>
+  </footer>
+</div>
+<%= debug(params) if Rails.env.development? %>
+</body>
+</html>

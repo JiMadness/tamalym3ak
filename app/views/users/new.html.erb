@@ -1,0 +1,31 @@
+<%= provide :title, 'إنضم إلينا' %>
+<div class="static-background"></div>
+<h1>&nbsp;&nbsp; إنضم إلينا</h1>
+<br>
+<div id="signup-form">
+  <%= form_for @user ,:html => { :'data-ajax' => false } do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.text_field :name %>
+      <%= f.label :name, "إسمك" %>
+      <br>
+      <%= f.text_field :username %>
+      <%= f.label :username, "اليوزرنيم .. الهاندل .. ولا بتسميه ايه لما تكتبه" %>
+      <br>
+      <%= f.email_field :email %>
+      <%= f.label :email, "بريدك الإلكتروني الروش جدا" %>
+      <br>
+      <%= f.label :avatar,"صورتك السيكسي يا سيكسي"%>
+      <br>
+      <%= f.file_field :avatar %>
+      <br>
+      <%= f.password_field :password %>
+      <%= f.label :password, "(كلمة السر:جزر (اوعى تكتبها جزر بجد" %>
+      <br>
+      <%= f.password_field :password_confirmation %>
+      <%= f.label :password_confirmation, "الباسوورد تاني ونبي كدة" %>
+      <br>
+      <br>
+      <br>
+      <%= f.submit "على بركة الله", id: "submit" %>
+  <% end %>
+</div>

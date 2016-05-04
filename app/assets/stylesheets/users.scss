@@ -1,0 +1,27 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#profile-info {
+  display: block;
+}
+#signup-form{
+  margin-left: 5%;
+  input{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+  }
+  input:hover{
+    background-color: lavender;
+  }
+}
+#submit{
+  font-family: "Droid Arabic Kufi", serif;
+  transform: scale(2,2);
+}
+#error{
+  background-color: rgba(240, 128, 128, 0.41);
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Arial",serif;
+}
